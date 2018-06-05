@@ -26,13 +26,34 @@
                 <br>
                 <p>An internal server error has occured.</p>
                 <p>
-                    This error has automatically been logged, so no further action needs to be taken. You can try again in a few minutes, and check for service
-                    outages via our <a href="https://twitter.com/wearpulse">twitter</a>. If you have any questions, feel free to email us at
+                    This error has automatically been logged, so no further action needs to be taken. You can try again in a few minutes, and
+                    check for service outages via our
+                    <a href="https://twitter.com/wearpulse">twitter</a>. If you have any questions, feel free to email us at
                     <a href="mailto:hello@pulsewearables.com">hello@pulsewearables.com</a>. Have a nice day.
                 </p>
+                <p>
+                    <a data-toggle="collapse" href="#moreInfo" role="button" aria-expanded="false" aria-controls="moreInfo">
+                        Debugging information
+                    </a>
+                    
+                </p>
+                <div class="collapse" id="moreInfo">
+                    <div class="card card-body">
+                        <ul>
+                            <li><strong>Client ID:</strong> <code id="clientID"></code></li>
+                            <li><strong>Connection:</strong> <code id="connection"></code></li>
+                            <li><strong>Error:</strong> <code id="error"></code></li>
+                            <li><strong>Error Description:</strong> <span id="errorDescription"></span></li>
+                            <li><strong>Error Tracking Number:</strong> <code id="tracking"></code></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js" integrity="sha384-u/bQvRA/1bobcXlcEYpsEdFVK/vJs3+T+nXLsBYJthmdBuavHvAW6UsmqO2Gd/F9" crossorigin="anonymous"></script>
+    <script src="error.js"></script>
 </body>
 
 </html>
