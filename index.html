@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Pulse Wearables - Internal Services</title>
+    <base href="/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/litera/bootstrap.min.css" rel="stylesheet" integrity="sha384-+YpxMU1QQywaQtI3dMQAwIcu0vVDuOREjQPC59qblQHg9nTdcrUXMPnanUaldUnY"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="loading">
+        <img src="assets/loading.svg" alt="Loading spinner">
+    </div>
+
+    <div class="content hidden">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Pulse Wearables - Internal Services</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor03">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" id="btn-home-view" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="btn-profile-view" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="qsLoginBtn" href="#">Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="qsLogoutBtn" href="#">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="container">
+            <!-- home view -->
+            <div id="home-view">
+                <h1 class="lead">Pulse Wearables</h1>
+                <h1>Internal Services</h1>
+                <br>
+                <p>Internal services for the Pulse Wearables team</p>
+                <p>
+                    <strong>Login Status:</strong>
+                    <span id="login-status"></span>
+                </p>
+            </div>
+
+            <!-- profile view -->
+            <div id="profile-view" class="panel panel-default profile-area">
+                <div class="alert alert-dismissible alert-info">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <h4 class="alert-heading">Welcome to Internal</h4>
+                    <p class="mb-0">Internal helps you to find the services offered by Pulse Wearables.
+                        <a href="mailto:william@pulsewearables.com" class="alert-link">Email me for more info</a>.</p>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Profile Information</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Contact me if you want to change this</h6>
+                        <ul>
+                            <li>
+                                <strong>Email:</strong>
+                                <span id="profile-email"></span>
+                            </li>
+                            <li>
+                                <strong>Nickname:</strong>
+                                <span id="profile-nickname"></span>
+                            </li>
+                            <li>
+                                <strong>Last Updated:</strong>
+                                <span id="profile-updated"></span>
+                            </li>
+                            <li>
+                                <strong>ID:</strong>
+                                <code id="profile-sub"></code>
+                            </li>
+                        </ul>
+                        <a href="#" id="change-password" class="card-link">Change Password</a>
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Email</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Access PulseWearables Email</h6>
+                        <a href="http://mail.pulsewearables.com" id="change-password" class="card-link">Open Email</a>
+                    </div>
+                </div>
+                <pre class="full-profile"></pre>
+            </div>
+
+            <!-- password view -->
+            <div id="password-view" class="panel panel-default profile-area">
+                <h1>Password Reset</h1>
+                <p class="lead"><span style="color: #A70000">Not Functioning </span> As a workaround, please use the forgot password button on the log in screen.</p>
+                <div class="password-reset">
+                    <div class="alert alert-danger" role="alert" id="passwords-error"></div>
+                    <div class="alert alert-success" role="alert" id="passwords-success"></div>
+                    <div class="form-group">
+                        <label class="col-form-label" for="inputDefault">New Password</label>
+                        <input class="form-control" placeholder="Type a password" id="newPassword" type="password">
+                        <label class="col-form-label" for="inputDefault">Verify new Password</label>
+                        <input class="form-control" placeholder="Again for good luck" id="verifyPassword" type="password">
+                    </div>
+                    <button class="btn btn-default" id="submitReset">Submit</button>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="node_modules/auth0-js/build/auth0.js"></script>
+    <script src="auth0-variables.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

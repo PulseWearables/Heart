@@ -1,0 +1,49 @@
+.hidden {
+  display: none;
+}
+
+.btn-margin {
+  margin-top: 7px
+}
+
+#profile-view, #password-view, #passwords-error, #passwords-success {
+  display: none;
+}
+
+.profile-area img {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.panel-body h3 {
+  margin-top: 0;
+}
+
+#loading {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+
+#home-view {
+  padding-top: 30vh;
+}
+
+#profile-view, #password-view {
+  padding-top: 5vh;
+}
+
+.password-reset {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
