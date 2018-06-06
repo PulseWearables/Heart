@@ -140,9 +140,13 @@ window.addEventListener('load', function() {
       } else if (err) {
         homeView.style.display = 'inline-block';
         console.log(err);
-        alert(
-          'Error: ' + err.error + '. Check the console for further details.'
-        );
+        if(err.error == "unauthorized") {
+          window.location = "/unauthorized.html"
+        } else {
+          alert(
+            'Error: ' + err.error + '. Check the console for further details.'
+          );
+        }
       }
       displayButtons();
     });
